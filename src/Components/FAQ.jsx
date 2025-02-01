@@ -15,18 +15,35 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="faq-container p-4">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-0.25">
       {faqs.map((faq, index) => (
-        <div key={index} className="faq-item mb-4">
-          <div
-            className={`faq-question cursor-pointer text-lg font-medium ${activeIndex === index ? 'text-[#4F46E5]' : 'text-[#6F6C90]'}`}
-            onClick={() => toggleFAQ(index)}
-          >
-            {faq.question}
-            <span className="faq-toggle ml-2">{activeIndex === index ? '-' : '+'}</span>
-          </div>
-          <div className={`faq-answer mt-2 ${activeIndex === index ? 'block' : 'hidden'} text-gray-600`}>
-            {faq.answer}
+        <div key={index} className="mb-4 w-full mx-4 md:mx-auto">
+          <div className="bg-gray-100 rounded-lg py-[17px] px-[20px] transition-all duration-200">
+            <div 
+              className="flex justify-between items-center cursor-pointer"
+              onClick={() => toggleFAQ(index)}
+            >
+              <h3 className={`text-base md:text-lg font-medium pr-4 ${
+                activeIndex === index ? 'text-[#4F46E5]' : 'text-[#000000]'
+              }`}>
+                {faq.question}
+              </h3>
+              <span className={`text-xl font-semibold ${
+                activeIndex === index ? 'text-[#4F46E5]' : 'text-[#000000]'
+              }`}>
+                {activeIndex === index ? '-' : '+'}
+              </span>
+            </div>
+
+            <div className={`overflow-hidden transition-all duration-300 ${
+              activeIndex === index 
+                ? 'max-h-[500px] opacity-100 pt-4'
+                : 'max-h-0 opacity-0'
+            }`}>
+              <p className="text-sm md:text-base text-[#6F6C90] leading-relaxed">
+                {faq.answer}
+              </p>
+            </div>
           </div>
         </div>
       ))}
