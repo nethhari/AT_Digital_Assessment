@@ -17,11 +17,11 @@ const App = () => {
           <img
             src={hero}
             alt="Business strategy"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover block p-0 m-0"
           />
         </div>
 
-        <div className="md:absolute container mx-auto w-full z-10 md:mt-0 mt-8">
+        <div className="md:absolute container mx-auto w-full z-10 md:mt-0 mt-0">
           <div className="bg-gradient-to-r from-[#1CBDDD] to-[#4DCA79] p-8 shadow-xl 
             w-full md:w-[55%] lg:w-[50%] md:left-[5%] md:bottom-[30%] md:absolute
             lg:p-10 xl:p-12 mb-10">
@@ -31,14 +31,15 @@ const App = () => {
                 We Crush Your Competitors, Goals, And Sales Records - Without The B.S.
               </h1>
               <div className="flex justify-start">
-                <Button />
+                <Button text="GET FREE CONSULTAION"/>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="py-12 px-4 sm:px-6 lg:px-8 bg-white ml-20 mr-20">
+
+      <div className="py-12 px-[40px] sm:px-[60px] lg:px-[100px] bg-white">
         <div className="max-w-7xl mx-auto space-y-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="h-72 sm:h-96 w-full bg-gray-200 rounded-lg overflow-hidden">
@@ -65,11 +66,11 @@ const App = () => {
                 to different intents shown by your potential customers who interact 
                 with your business online.
               </p>
-              <Button className="mt-4">LEARN MORE</Button>
+              <Button text="LEARN MORE" className="mt-4"></Button>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center ml-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="lg:order-2 h-72 sm:h-96 w-full bg-gray-200 rounded-lg overflow-hidden">
               <img 
                 src={image1} 
@@ -95,7 +96,7 @@ const App = () => {
                 concept and strategic overview to find the most efficient model for 
                 your business.
               </p>
-              <Button className="mt-4">LEARN MORE</Button>
+              <Button text="LEARN MORE" className="mt-4"></Button>
             </div>
           </div>
         </div>
@@ -117,7 +118,7 @@ const App = () => {
         <FQA />
       
 
-      {/* Added margin-top for 10px gap */}
+      
       <div className="mt-[100px]">
         <Footer />
       </div>
